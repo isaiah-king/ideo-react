@@ -37,7 +37,8 @@
     "webpack": "^1.13.1",
     "webpack-dev-middleware": "^1.6.1",
     "webpack-dev-server": "^1.16.3",
-    "whatwg-fetch": "^1.0.0"
+    "whatwg-fetch": "^1.0.0",
+    "snyk": "^1.88.0"
   },
   "devDependencies": {
     "babel-core": "^6.11.4",
@@ -90,7 +91,9 @@
     "clean": "node run clean",
     "build": "node run build",
     "build:debug": "node run build --debug",
-    "start": "webpack-dev-server --debug --hot --inline --config ./webpack.config.js"
+    "start": "webpack-dev-server --debug --hot --inline --config ./webpack.config.js",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "description": "> **Forkable JavaScript React Static** is a template for creating React based stand alone websites > (sites that are served as static html, css, and javascript). The repo doesn't include any server, it > needs to be built and deployed to a static web server. (Though it can be connected to existing services like Firebase)",
   "main": "main.js",
@@ -106,5 +109,6 @@
   "bugs": {
     "url": "https://github.com/isaiah-king/ideo-react/issues"
   },
-  "homepage": "https://github.com/isaiah-king/ideo-react#readme"
+  "homepage": "https://github.com/isaiah-king/ideo-react#readme",
+  "snyk": true
 }
